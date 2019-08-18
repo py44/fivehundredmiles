@@ -6,7 +6,11 @@ import java.util.Scanner;
 public class crawler01 {
     /**以一个导航网站为起始做一个遍历web的爬虫
      建立两个数组列表，一个用来存储待遍历的网址，另一个用来统计已遍历的网址
-     没有使用任何框架的一个简单的小程序，所以程序会出现两个状况
+     没有使用任何框架的一个简单的小程序，如果数量足够的话会统计300个URL
+     这个程序也经过一些调整与改进，使得：
+     1.在第一次输入一个无效网址时，通过try-catch块控制循环变量来达到重新输入的目的
+     2.建了一个PrintWriter对象创建本地text，来把结果写入text
+     3.写出消息提醒标志遍历结束和写入文本结束
      */
     public static void main(String [] args){
         try (java.util.Scanner input = new java.util.Scanner(System.in)) {
